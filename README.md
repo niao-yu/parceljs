@@ -19,7 +19,7 @@
 
 ```json
   "dev": "rm -rf ./.cache && rm -rf ./dist && parcel ./src/*.html",
-  "build": "rm -rf ./.cache && rm -rf ./dist && parcel build ./src/*.html --public-url ./ --no-source-maps --no-minify"
+  "build": "rm -rf ./.cache && rm -rf ./dist && parcel build ./src/*.html -d build --public-url ./ --no-source-maps --no-minify"
 ```
 
 下面说明一下参数：
@@ -27,10 +27,8 @@
 - ```rm -rf ./.cache```：删除缓存文件夹  
 - ```rm -rf ./dist```：删除上次构建好的项目文件夹  
 - ```parcel ./src/*.html```：启动服务，入口文件为```./src```下的html文件  
+- ```-d build```：生成的项目文件夹修改，开发时可以使用默认的dist文件夹，而build构建时添加这个参数，这样构建完后的代码就放在build文件夹中。  
 - ```parcel build ./src/*.html```：构建项目，入口文件为```./src```下的html文件  
 - ```--public-url ./```：指定项目中引用文件的路径，由默认的绝对路径```/```，改为相对路径```./```  
 - ```--no-source-maps```：不生成```.map```文件  
 - ```--no-minify```：禁用代码压缩混淆  
-
-额外的一条指令，可以看情况使用
-- ```-d build```：生成的项目文件夹修改，可以开发时不添加(使用默认的dist文件夹)，build时添加这个参数，这样构建完后的代码放在build文件夹中。
