@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "rm -rf ./.cache && rm -rf ./dist && parcel ./src/*.html",
-    "build": "rm -rf ./.cache && rm -rf ./dist && parcel build ./src/*.html -d build --public-url ./ --no-source-maps --no-minify"
+    "build": "rm -rf ./.cache ./dist build && parcel build ./src/*.html -d build --public-url ./ --no-source-maps --no-minify"
   },
   "dependencies": {},
   "devDependencies": {
