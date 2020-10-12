@@ -15,11 +15,11 @@
 
 ## 命令说明：
 
-截止当前，我的命令为一下两条：
+截止当前，我的命令为主要为以下两条：
 
 ```json
   "dev": "rm -rf ./.cache && rm -rf ./dist && parcel ./src/*.html",
-  "build": "rm -rf ./.cache && rm -rf ./dist && parcel build ./src/*.html -d build --public-url ./ --no-source-maps --no-minify"
+  "build": "rm -rf ./.cache ./dist build && parcel build ./src/*.html -d build --public-url ./ --no-source-maps --no-minify"
 ```
 
 下面说明一下参数：
